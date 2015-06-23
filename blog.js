@@ -17,6 +17,17 @@
 //   .getPosts()
 //   .createPost()
 //   .deletePost()
+// var form = document.createElement('form');
+// document.body.appendChild(form);
+
+var input = document.createElement("input");
+// input.innerHTML = "Submit";
+document.body.appendChild(input);
+
+var button = document.createElement('button');
+button.innerHTML = "Smexy";
+document.body.appendChild(button);
+
 
 function blogFactory(settings){
   var author = settings.author;
@@ -28,17 +39,17 @@ function blogFactory(settings){
     getBlogName: _getBlogName,
     editBlogName: _editBlogName,
     createPosts: _createPosts
-    
+
     // noDeleteAuthorName: _noDeleteAuthorName
-  }
+  };
   return blog;
 
   function _getAuthor(){
     return author;
   }
-  
+
   function _editAuthor(newAuthorName){
-    author = newAuthorName; 
+    author = newAuthorName;
   }
 
   function _getBlogName(){
@@ -51,16 +62,16 @@ function blogFactory(settings){
 
   function _createPosts(){
     var post = postFactory(settings);
-    
+
   }
 
   function postFactory(settings){
       var postTitle = settings.title;
       var posts = {
         getPostTitle: _getPostTitle,
-      }
+      };
       return posts;
-     
+
       function _getPostTitle(){
 
       }
